@@ -43,18 +43,19 @@
 {% block content %}
   {% include "navbar.html" %}
   <div class="container">
-  <div class="row">
-    {%- block sidebar1 %}{{ bsidebar() }}{% endblock %}
-    <div class="{{ bs_span_prefix }}{{ bs_content_width }} content">
-      {% block body %}{% endblock %}
+    <div class="row">
+      {%- block sidebar1 %}{{ bsidebar() }}{% endblock %}
+      <div class="{{ bs_span_prefix }}{{ bs_content_width }} content">
+        {% block body %}{% endblock %}
+      </div>
+      {% block sidebar2 %} {# possible location for sidebar #} {% endblock %}
     </div>
-    {% block sidebar2 %} {# possible location for sidebar #} {% endblock %}
   </div>
 {% endblock %}
 
 {% block footer %}
 <footer>
-    <div class="footer" role="navigation">
+    <div class="custom-footer" role="navigation">
         <div class="container">
             <div class="navbar-text">
                 <ul class="footer-text">
