@@ -1,0 +1,82 @@
+{% extends "!layout.html" %}
+{% set css_files = css_files + ['_static/index.css'] %}
+{% set extra_scripts = ["_static/js/bootstrap.min.js", "_static/js/scroll.js"] %}
+{% set script_files = script_files + extra_scripts %}
+
+{% block extrahead %}
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+  <script type= "text/javascript">
+    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  </script>
+  {{ super() }}
+{% endblock %}
+
+{% set links = [
+  ['Install'], ['About'], ['Resources'],
+  ['Documentation'],
+  ['NBViewer', 'https://nbviewer.jupyter.org'], ['Widgets'],
+  ['Blog', 'https://blog.jupyter.org'], ['Donate']
+] %}
+{% set pages = {'Install': 'install.html', 'About': 'about.html', 'Resources' : 'community.html',
+  'Widgets': 'widgets.html', 'Donate': 'donate.html' }
+%}
+{% set baseurl = 'http://jupyter.org' %}
+
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+
+{% set bs_span_prefix = "col-md-" %}
+{%- set render_sidebar = (not embedded) and (not theme_nosidebar|tobool) and sidebars %}
+{%- set bs_content_width = render_sidebar and "9" or "12"%}
+{%- macro bsidebar() %}
+      {%- if render_sidebar %}
+      <div class="{{ bs_span_prefix }}3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+          {%- for sidebartemplate in sidebars %}
+            {%- include sidebartemplate %}
+          {%- endfor %}
+        </div>
+      </div>
+      {%- endif %}
+  {%- endmacro %}
+
+{% block content %}
+  {% include "navbar.html" %}
+  <div class="container">
+  <div class="row">
+    {%- block sidebar1 %}{{ bsidebar() }}{% endblock %}
+    <div class="{{ bs_span_prefix }}{{ bs_content_width }} content">
+      {% block body %}{% endblock %}
+    </div>
+    {% block sidebar2 %} {# possible location for sidebar #} {% endblock %}
+  </div>
+{% endblock %}
+
+{% block footer %}
+<footer>
+    <div class="footer" role="navigation">
+        <div class="container">
+            <div class="navbar-text">
+                <ul class="footer-text">
+                    <li><a href="{{ baseurl }}/index.html">Home</a></li>
+                    {% for name in links %}
+                      {% if name | length == 2 %}
+                           <li><a href="{{ name[1] }}" target="_blank">{{ name[0] }}</a></li>
+                      {% else %}
+                           <li><a href="{{ baseurl }}/{{ pages[name[0]] }}">{{ name[0] }}</a></li>
+                      {% endif %}
+                    {% endfor %}
+                    <p>
+                      {% trans copyright=copyright|e %} Copyright &#169; {{ copyright }} - {% endtrans %}
+                      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}{% endtrans %}
+                    </p>
+                </ul>
+            </div>
+            <div class="follow">
+                <a class="github-button" href="https://github.com/jupyter" aria-label="Follow @jupyter on GitHub">Follow @jupyter</a>
+                <br><a href="https://twitter.com/ProjectJupyter" class="twitter-follow-button" data-show-count="false">Follow @ProjectJupyter</a>
+            </div>
+        </div>
+    </div>
+</footer>
+{% endblock %}

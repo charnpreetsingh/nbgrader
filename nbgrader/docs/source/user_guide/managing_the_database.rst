@@ -56,7 +56,7 @@ database. The first is by declaring them explicitly in the
 
 The second is by writing a Python script and using the :doc:`API </api/index>`. The third way is to use the command line tool ``nbgrader db``, which provides limited command line access to some of the API functionality.
 
-.. code:: 
+.. code:: python
 
     %%bash
     
@@ -70,7 +70,7 @@ To add assignments, we can use the ``nbgrader db assignment add``
 command, which takes the name of the assignment as well as optional
 arguments (such as its due date):
 
-.. code:: 
+.. code:: python
 
     %%bash
     
@@ -85,7 +85,7 @@ arguments (such as its due date):
 After we have added the assignment, we can view what assignments exist
 in the database with ``nbgrader db assignment list``:
 
-.. code:: 
+.. code:: python
 
     %%bash
     
@@ -102,7 +102,7 @@ An alternate way to add assignments is a batch method of importing a CSV
 file. The file must have a column called ``name``, and may optionally
 have columns for other assignment properties (such as the due date):
 
-.. code:: 
+.. code:: python
 
     %%file assignments.csv
     name,duedate
@@ -118,7 +118,7 @@ have columns for other assignment properties (such as the due date):
 Then, to import this file, we use the ``nbgrader db assignment import``
 command:
 
-.. code:: 
+.. code:: python
 
     %%bash
     
@@ -136,7 +136,7 @@ We can also remove assignments from the database with
 ``nbgrader db assignment remove``. **Be very careful using this command,
 as it is possible you could lose data!**
 
-.. code:: 
+.. code:: python
 
     %%bash
     
@@ -155,7 +155,7 @@ Managing students in the database works almost exactly the same as
 managing assignments. To add students, we use the
 ``nbgrader db student add`` command:
 
-.. code:: 
+.. code:: python
 
     %%bash
     
@@ -172,7 +172,7 @@ managing assignments. To add students, we use the
 And to list the students in the database, we use the
 ``nbgrader db student list`` command:
 
-.. code:: 
+.. code:: python
 
     %%bash
     
@@ -192,7 +192,7 @@ to create a CSV file, which is required to have a column for ``id``, and
 optionally may have columns for other student information (such as their
 name):
 
-.. code:: 
+.. code:: python
 
     %%file students.csv
     id,last_name,first_name,email
@@ -205,7 +205,7 @@ name):
     Writing students.csv
 
 
-.. code:: 
+.. code:: python
 
     %%bash
     
@@ -223,7 +223,7 @@ We can also remove students from the database with
 ``nbgrader db student remove``. **Be very careful using this command, as
 it is possible you could lose data!**
 
-.. code:: 
+.. code:: python
 
     %%bash
     
