@@ -55,7 +55,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'nbgrader'
-copyright = '2015, Jupyter Development Team'
+copyright = '2017 Project Jupyter'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -153,7 +153,7 @@ html_extra_path = ["extra_files"]
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-#html_last_updated_fmt = '%b %d, %Y'
+html_last_updated_fmt = "%a, %b %d, %Y"
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
