@@ -1,8 +1,6 @@
 
 body {
     background-color: white;
-    margin-left: 1em;
-    margin-right: 1em;
 }
 
 div.related {
@@ -189,4 +187,56 @@ div.footer a:hover {
 
 .highlight {
     background: none !important;
+}
+p.caption {
+    margin: 24px 0px 5px 0px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.toctree-l1 {
+    color: #757575;
+    font-size: 18px;
+    list-style-type: none;   
+    margin: 5px 0px;
+}
+.bs-sidenav .toctree-l1 .current {
+    color: #F37726;
+}
+.bs-sidenav .toctree-l1 .current:hover {
+    color: #F37726;
+}
+.bs-sidenav ul {
+    margin-left: 0px;
+}
+.bs-sidenav .reference {
+    color: #757575;
+    border-bottom: none;
+    transition: color .25s ease-in-out;
+    -moz-transition: color .25s ease-in-out;
+    -webkit-transition: color .25s ease-in-out;
+}
+.bs-sidenav .reference:hover {
+    color: #424242;
+    text-decoration: none;
+    border-bottom: none;
+}
+.content h1 {
+    font-size: 36px;
+    font-weight: 400;
+}
+.content h2 {
+    font-size: 28px;
+    font-weight: 400;
+}
+.content h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+.content p {
+    line-height: 24px;
+}
+.docs-breadcrumbs {
+    height: 36px;
+    background-color: #757575;
+    padding: 0px;
 }

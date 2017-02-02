@@ -1,7 +1,7 @@
 body {
     font-weight: 400;
     /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
-    padding-top: 70px;
+    padding-top: 120px;
 }
 
 /* Navbar and footer (global) styling */
@@ -745,9 +745,6 @@ body {
     }
     .companies li {
         width: 30%;
-    }
-    body {
-        padding-top: 50px;
     }
     .jumbotron {
         margin-right: 5%;
