@@ -40,8 +40,8 @@
       {%- endif %}
   {%- endmacro %}
 
+{% include "navbar.html" %}
 {% block content %}
-  {% include "navbar.html" %}
   <div class="container">
     <div class="row">
       {%- block sidebar1 %}{{ bsidebar() }}{% endblock %}
