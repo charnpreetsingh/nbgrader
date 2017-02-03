@@ -49,16 +49,18 @@
         </div>
         <!-- /.container -->
         <div class="docs-breadcrumbs">
-          <ul>
-            <li><a href = "https://jupyter.org"> Home </a></li>
-            <li><a href="{{ pathto(master_doc) }}"> {{ project }}</a> > </li>
-            {% for doc in parents %}
-              <li><a href="{{ doc.link|e }}">{{ doc.title }}</a> > </li>
-            {% endfor %}
-            {% if title != project %}
-            <li>{{ title }}</li>
-            {% endif %}
-          </ul>
+            <div class="container">
+                <ul>
+                    <li class="docs-breadcrumb-item"><a href = "https://jupyter.org"><img src="../_static/_images/jupytertheme-images/breadcrumb-home.svg"/ class="breadcrumb-home"></a><img src="../_static/_images/jupytertheme-images/breadcrumb-separator.svg" class="breadcrumb-separator"/></li>
+                    <li class="docs-breadcrumb-item"><a href="{{ pathto(master_doc) }}"> {{ project }}</a><img src="../_static/_images/jupytertheme-images/breadcrumb-separator.svg" class="breadcrumb-separator"/></li>
+                    {% for doc in parents %}
+                    <li class="docs-breadcrumb-item"><a href="{{ doc.link|e }}">{{ doc.title }}</a><img src="../_static/_images/jupytertheme-images/breadcrumb-separator.svg" class="breadcrumb-separator"/></li>
+                    {% endfor %}
+                    {% if title != project %}
+                    <li class="docs-breadcrumb-item">{{ title }}</li>
+                    {% endif %}
+                </ul>
+            </div>
         </div>
     </div>
 </nav>

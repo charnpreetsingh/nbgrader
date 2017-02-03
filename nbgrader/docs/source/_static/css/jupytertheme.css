@@ -237,7 +237,7 @@ p.caption {
     text-decoration: none;
     border-bottom: none;
 }
-.content h1 {
+.content h1, .bs-sidenav h1 {
     font-size: 36px;
     font-weight: 400;
 }
@@ -260,6 +260,7 @@ p.caption {
     text-decoration: none;
 }
 div.admonition, div.topic {
+    margin: 20px 0px;
     padding: 16px 24px;
 }
 div.admonition .docutils {
@@ -273,4 +274,26 @@ div.admonition p.admonition-title {
     height: 36px;
     background-color: #757575;
     padding: 0px;
+}
+.docs-breadcrumbs ul {
+    margin-left: 0px;
+}
+.docs-breadcrumb-item {
+    list-style-type: none;
+    display: inline;
+    color: white;
+    font-size: 16px;
+    line-height: 2.2;
+    height: 24px;
+}
+.docs-breadcrumb-item a {
+    color: white;
+    letter-spacing: .8px;
+}
+.breadcrumb-home {
+    height: 24px;
+}
+.breadcrumb-separator {
+    height: 16px;
+    padding: 0px 12px;
 }
