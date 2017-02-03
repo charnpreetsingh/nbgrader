@@ -193,10 +193,11 @@ p.caption {
     font-size: 20px;
     font-weight: 500;
 }
+/* First Level Nav Link in Sidebar */
 .toctree-l1 {
     color: #757575;
     font-size: 18px;
-    list-style-type: none;   
+    list-style-type: none;
     margin: 5px 0px;
 }
 .bs-sidenav .toctree-l1 .current {
@@ -205,6 +206,19 @@ p.caption {
 .bs-sidenav .toctree-l1 .current:hover {
     color: #F37726;
 }
+/* Second Level Nav Link in Sidebar */
+.toctree-l2 {
+    font-size: 16px;
+    list-style-type: none;
+    margin: 5px 10px;
+}
+.bs-sidenav .toctree-l2 .current {
+    color: #F37726;
+}
+.bs-sidenav .toctree-l2 .current:hover {
+    color: #F37726;
+}
+
 .bs-sidenav ul {
     margin-left: 0px;
 }
