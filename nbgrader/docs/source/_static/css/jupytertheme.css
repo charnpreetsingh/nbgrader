@@ -198,10 +198,11 @@ p.caption {
     color: #757575;
     font-size: 18px;
     list-style-type: none;
-    margin: 8px 0px;
+    margin: 5px 0px;
 }
 .bs-sidenav .toctree-l1 .current {
     color: #F37726;
+    font-weight: 500;
 }
 .bs-sidenav .toctree-l1 .current:hover {
     color: #F37726;
@@ -241,13 +242,16 @@ p.caption {
     font-size: 36px;
     font-weight: 400;
 }
+.bs-sidenav h1 a {
+    color: black;
+}
 .content h2 {
     font-size: 28px;
     font-weight: 400;
 }
 .content h3 {
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 500;
 }
 .content p {
     line-height: 24px;
@@ -262,6 +266,9 @@ p.caption {
 div.admonition, div.topic {
     margin: 20px 0px;
     padding: 16px 24px;
+}
+div.topic .topic-title {
+    font-size: 18px;
 }
 div.admonition .docutils {
     margin-top: 12px;
@@ -296,4 +303,10 @@ div.admonition p.admonition-title {
 .breadcrumb-separator {
     height: 16px;
     padding: 0px 12px;
+}
+.toc-backref {
+    color: #424242;
+}
+.toc-backref:hover {
+    color: #424242;
 }
