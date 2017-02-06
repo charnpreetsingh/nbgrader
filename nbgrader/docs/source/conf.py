@@ -163,6 +163,7 @@ html_last_updated_fmt = "%a, %b %d, %Y"
 # Custom sidebar templates, maps document names to template names.
 html_sidebars = {
    '**': [
+        'searchbox.html',
         'custom_navigation.html'
     ]
 }
