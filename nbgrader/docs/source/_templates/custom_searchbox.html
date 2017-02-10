@@ -9,7 +9,6 @@
 #}
 {%- if pagename != "search" and builder != "singlehtml" %}
 <div id="searchbox" style="display: none" role="search">
-  <h3>{{ _('Quick search') }}</h3>
     <form class="search" action="{{ pathto('search') }}" method="get">
       <div><input type="text" name="q" /></div>
       <div><input type="submit" value="{{ _('Go') }}" /></div>
