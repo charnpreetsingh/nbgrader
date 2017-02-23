@@ -10,8 +10,10 @@
 {%- if pagename != "search" and builder != "singlehtml" %}
 <div id="searchbox" style="display: none" role="search">
     <form class="search" action="{{ pathto('search') }}" method="get">
-      <div><input type="text" name="q" /></div>
-      <div><input type="submit" value="{{ _('Go') }}" /></div>
+      <div>
+        <input type="text" class="docs-search-input" name="q" />
+        <input type="submit" class="docs-search-submit" value="{{ _('') }}" />
+      </div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
